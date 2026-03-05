@@ -1,6 +1,7 @@
-numpy libraray projects 
-this repo contains python projects built using numpy 
-it includes practice programs and miniprojects demonstrating array operations , matrix computations , and numercial analysis .
+numpy libraray projects
 
-author 
+This repo contains python projects built using numpy 
+It includes practice programs and miniprojects demonstrating array operations , matrix computations , and numercial analysis .
+
+Author 
 sakshi srivastava
