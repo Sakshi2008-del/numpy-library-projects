@@ -1,0 +1,45 @@
+import numpy as np
+
+#simulated  temprature dataset ( 30 days )
+temperature = np.array([30 , 32 ,34 , 30 , 29 , 34 , 35 , 36 , 33, 35 , 34 , 32 , 28 , 28 , 27 , 29 , 30 , 31 , 30 , 31 , 35, 33 , 34 , 30 , 27 , 28 , 26 , 24 , 22 , 23  ])
+print("___________WEATHER DATA ANALYSIS__________")
+
+avg_temp = np.mean(temperature)
+max_temp = np.max(temperature)
+min_temp = np.min(temperature)
+std_temp = np.std(temperature)
+
+print("average temperatre :",avg_temp)
+print("max temperatre :",max_temp)
+print("min temperatre :",min_temp)
+print(" temperatre standard deviation :",std_temp)
+
+#hottest and coldest day 
+hottest_day = np.argmax(temperature) + 1
+coldest_day = np.argmin(temperature) + 1
+
+
+print("hottest day (day no.) :", hottest_day)
+print("coldest day (day no.)", coldest_day)
+
+#weekly averages
+weeks = temperature.reshape(5,6)
+weekly_avg = np.mean(weeks , axis = 1)
+
+
+print ("\weekly averge temperature :")
+for i, avg in enumerate(weekly_avg):
+    print(f"Week {i+1}:", avg)
+
+#hot and cold day analysis
+hot_days = np.sum(temperature > 34)
+cold_days = np.sum(temperature < 23)
+
+print("\nNumber of Hot Days (>35°C):", hot_days)
+print("Number of Cold Days (<20°C):", cold_days)
+
+#temperature difference from average
+difference = temperature - avg_temp
+
+print("\ntemperature difference from average:")
+print(difference)
